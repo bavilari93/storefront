@@ -2,7 +2,7 @@ $border: #424B54;
 * {
     border: 0;
     margin: 0;
-    position: 0;
+    padding:0;
 }
 
 
@@ -38,40 +38,135 @@ body {
     border-radius: 100%;
     background: #FFCF56;
     border: 5px solid $border;
-    margin:{
-    	left:-5rem;
-    	top:2rem;
+    margin: {
+        left: -5rem;
+        top: 2rem;
     }
-    &:before,&:after{
-    	position:absolute; 
-    	content:'';
+    &:before,
+    &:after {
+        position: absolute;
+        content: '';
     }
-    &:before{
-    	width: 5px; 
-    	height:30px; 
-    	background-color:$border;
-    	margin:{
-    		top:1.9rem;
-    		left:.6rem;
-    	}
+    &:before {
+        width: 5px;
+        height: 30px;
+        background-color: $border;
+        margin: {
+            top: 1.9rem;
+            left: .6rem;
+        }
     }
-    &:after{
-    	width:60px; 
-    	height:5px;
-    	background-color: $border;
-    	margin:{
-    		left:.78rem;
-    		top:3.5rem;
-    	}
+    &:after {
+        width: 60px;
+        height: 5px;
+        background-color: $border;
+        margin: {
+            left: .78rem;
+            top: 3.5rem;
+        }
     }
 }
-.top-still{
-	width: 500px; 
-	height: 30px;
-	background:#FFF;
-	border:5px solid $border;
-	margin:{
-		top:-2rem;
-		left:-3.5rem;
-	}
+
+.top-still {
+    width: 500px;
+    height: 30px;
+    background: #FFF;
+    border: 5px solid $border;
+    margin: {
+        top: -2rem;
+        left: -3.5rem;
+    }
+}
+
+.curtain {
+    z-index: 20;
+    width: 300px;
+    height: 80px;
+    background: repeating-linear-gradient(to right, #FFF, #FFF 20px, #F77AC0 20px, #F77AC0 40px);
+    border: 5px solid $border;
+    margin: {
+        top: 1rem;
+        left: 2.5rem;
+    }
+    &:before {
+        position: absolute;
+        content: '';
+        width: 300px;
+        height: 5px;
+        background: $border;
+        margin-top: 3.5rem;
+    }
+}
+
+.window {
+    z-index: 10;
+    width: 120px;
+    height: 30px;
+    background: #ADE1E5;
+    border: 5px solid $border;
+    margin: {
+        top: 6.4rem;
+        left: 3rem;
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        width: 140px;
+        height: 15px;
+        background: #FFF;
+        border: 5px solid $border;
+        margin: {
+            left: -1rem;
+            top: 1.9rem;
+        }
+    }
+    .shine {
+        opacity: 0.5;
+        border: {
+            bottom: 47px solid #FFF;
+            left: 100px solid transparent;
+            right: 1px solid transparent;
+        }
+        margin-top:-1rem;
+    }
+}
+
+.door {
+    width: 70px;
+    height: 150px;
+    border: 5px solid $border;
+    border-bottom: none;
+    background: #FFF;
+    margin: {
+        top: 3rem;
+        left: 14rem;
+    }
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+    }
+    &:before {
+        width: 40px;
+        height: 100px;
+        background: #ADE1E5;
+        border: 5px solid $border;
+        margin: {
+            left: .5rem;
+        }
+    }
+       &:after{
+            top: 87px;
+            left: 15px;
+            opacity: 0.5;
+            border: {
+                bottom: 47px solid #FFF;
+                left: 38px solid transparent;
+                right: 3px solid transparent;
+            }
+            margin:{
+            	top:-1.9rem;
+            	left:-.1rem;
+            }
+        }
 }
