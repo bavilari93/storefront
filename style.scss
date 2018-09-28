@@ -132,6 +132,7 @@ body {
 }
 
 .door {
+ z-index: 10;
     width: 70px;
     height: 150px;
     border: 5px solid $border;
@@ -169,4 +170,14 @@ body {
             	left:-.1rem;
             }
         }
+}
+.bottom-still{
+	 width: 700px;
+    height: 10px;
+    background: #FFF;
+    border: 5px solid $border;
+    margin:{
+    	top:11.7rem;
+    	left: -5rem;
+    }
 }
